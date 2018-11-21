@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5ACE22A21A5BEF000B6DDF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */; };
+		F5ACE22D21A5BEF000B6DDF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22C21A5BEF000B6DDF0 /* ViewController.m */; };
+		F5ACE23021A5BEF000B6DDF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5ACE22E21A5BEF000B6DDF0 /* Main.storyboard */; };
+		F5ACE23221A5BEF100B6DDF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5ACE23121A5BEF100B6DDF0 /* Assets.xcassets */; };
+		F5ACE23521A5BEF100B6DDF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5ACE23321A5BEF100B6DDF0 /* LaunchScreen.storyboard */; };
+		F5ACE23821A5BEF100B6DDF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE23721A5BEF100B6DDF0 /* main.m */; };
+		F5ACE24221A5BEF100B6DDF0 /* Dungeon_CrawlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE24121A5BEF100B6DDF0 /* Dungeon_CrawlerTests.m */; };
+		F5ACE24D21A5BEF100B6DDF0 /* Dungeon_CrawlerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE24C21A5BEF100B6DDF0 /* Dungeon_CrawlerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5ACE23E21A5BEF100B6DDF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5ACE21D21A5BEF000B6DDF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5ACE22421A5BEF000B6DDF0;
+			remoteInfo = "Dungeon Crawler";
+		};
+		F5ACE24921A5BEF100B6DDF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5ACE21D21A5BEF000B6DDF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5ACE22421A5BEF000B6DDF0;
+			remoteInfo = "Dungeon Crawler";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5ACE22521A5BEF000B6DDF0 /* Dungeon Crawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Crawler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5ACE22821A5BEF000B6DDF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5ACE22B21A5BEF000B6DDF0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F5ACE22C21A5BEF000B6DDF0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5ACE22F21A5BEF000B6DDF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5ACE23121A5BEF100B6DDF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5ACE23421A5BEF100B6DDF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5ACE23621A5BEF100B6DDF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5ACE23721A5BEF100B6DDF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5ACE23D21A5BEF100B6DDF0 /* Dungeon CrawlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeon CrawlerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5ACE24121A5BEF100B6DDF0 /* Dungeon_CrawlerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dungeon_CrawlerTests.m; sourceTree = "<group>"; };
+		F5ACE24321A5BEF100B6DDF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5ACE24821A5BEF100B6DDF0 /* Dungeon CrawlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeon CrawlerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5ACE24C21A5BEF100B6DDF0 /* Dungeon_CrawlerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dungeon_CrawlerUITests.m; sourceTree = "<group>"; };
+		F5ACE24E21A5BEF100B6DDF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5ACE22221A5BEF000B6DDF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5ACE23A21A5BEF100B6DDF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5ACE24521A5BEF100B6DDF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5ACE21C21A5BEF000B6DDF0 = {
+			isa = PBXGroup;
+			children = (
+				F5ACE22721A5BEF000B6DDF0 /* Dungeon Crawler */,
+				F5ACE24021A5BEF100B6DDF0 /* Dungeon CrawlerTests */,
+				F5ACE24B21A5BEF100B6DDF0 /* Dungeon CrawlerUITests */,
+				F5ACE22621A5BEF000B6DDF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5ACE22621A5BEF000B6DDF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5ACE22521A5BEF000B6DDF0 /* Dungeon Crawler.app */,
+				F5ACE23D21A5BEF100B6DDF0 /* Dungeon CrawlerTests.xctest */,
+				F5ACE24821A5BEF100B6DDF0 /* Dungeon CrawlerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5ACE22721A5BEF000B6DDF0 /* Dungeon Crawler */ = {
+			isa = PBXGroup;
+			children = (
+				F5ACE22821A5BEF000B6DDF0 /* AppDelegate.h */,
+				F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */,
+				F5ACE22B21A5BEF000B6DDF0 /* ViewController.h */,
+				F5ACE22C21A5BEF000B6DDF0 /* ViewController.m */,
+				F5ACE22E21A5BEF000B6DDF0 /* Main.storyboard */,
+				F5ACE23121A5BEF100B6DDF0 /* Assets.xcassets */,
+				F5ACE23321A5BEF100B6DDF0 /* LaunchScreen.storyboard */,
+				F5ACE23621A5BEF100B6DDF0 /* Info.plist */,
+				F5ACE23721A5BEF100B6DDF0 /* main.m */,
+			);
+			path = "Dungeon Crawler";
+			sourceTree = "<group>";
+		};
+		F5ACE24021A5BEF100B6DDF0 /* Dungeon CrawlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5ACE24121A5BEF100B6DDF0 /* Dungeon_CrawlerTests.m */,
+				F5ACE24321A5BEF100B6DDF0 /* Info.plist */,
+			);
+			path = "Dungeon CrawlerTests";
+			sourceTree = "<group>";
+		};
+		F5ACE24B21A5BEF100B6DDF0 /* Dungeon CrawlerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5ACE24C21A5BEF100B6DDF0 /* Dungeon_CrawlerUITests.m */,
+				F5ACE24E21A5BEF100B6DDF0 /* Info.plist */,
+			);
+			path = "Dungeon CrawlerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5ACE22421A5BEF000B6DDF0 /* Dungeon Crawler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5ACE25121A5BEF100B6DDF0 /* Build configuration list for PBXNativeTarget "Dungeon Crawler" */;
+			buildPhases = (
+				F5ACE22121A5BEF000B6DDF0 /* Sources */,
+				F5ACE22221A5BEF000B6DDF0 /* Frameworks */,
+				F5ACE22321A5BEF000B6DDF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dungeon Crawler";
+			productName = "Dungeon Crawler";
+			productReference = F5ACE22521A5BEF000B6DDF0 /* Dungeon Crawler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5ACE23C21A5BEF100B6DDF0 /* Dungeon CrawlerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5ACE25421A5BEF100B6DDF0 /* Build configuration list for PBXNativeTarget "Dungeon CrawlerTests" */;
+			buildPhases = (
+				F5ACE23921A5BEF100B6DDF0 /* Sources */,
+				F5ACE23A21A5BEF100B6DDF0 /* Frameworks */,
+				F5ACE23B21A5BEF100B6DDF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5ACE23F21A5BEF100B6DDF0 /* PBXTargetDependency */,
+			);
+			name = "Dungeon CrawlerTests";
+			productName = "Dungeon CrawlerTests";
+			productReference = F5ACE23D21A5BEF100B6DDF0 /* Dungeon CrawlerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5ACE24721A5BEF100B6DDF0 /* Dungeon CrawlerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5ACE25721A5BEF100B6DDF0 /* Build configuration list for PBXNativeTarget "Dungeon CrawlerUITests" */;
+			buildPhases = (
+				F5ACE24421A5BEF100B6DDF0 /* Sources */,
+				F5ACE24521A5BEF100B6DDF0 /* Frameworks */,
+				F5ACE24621A5BEF100B6DDF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5ACE24A21A5BEF100B6DDF0 /* PBXTargetDependency */,
+			);
+			name = "Dungeon CrawlerUITests";
+			productName = "Dungeon CrawlerUITests";
+			productReference = F5ACE24821A5BEF100B6DDF0 /* Dungeon CrawlerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5ACE21D21A5BEF000B6DDF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = George;
+				TargetAttributes = {
+					F5ACE22421A5BEF000B6DDF0 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					F5ACE23C21A5BEF100B6DDF0 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F5ACE22421A5BEF000B6DDF0;
+					};
+					F5ACE24721A5BEF100B6DDF0 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F5ACE22421A5BEF000B6DDF0;
+					};
+				};
+			};
+			buildConfigurationList = F5ACE22021A5BEF000B6DDF0 /* Build configuration list for PBXProject "Dungeon Crawler" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5ACE21C21A5BEF000B6DDF0;
+			productRefGroup = F5ACE22621A5BEF000B6DDF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5ACE22421A5BEF000B6DDF0 /* Dungeon Crawler */,
+				F5ACE23C21A5BEF100B6DDF0 /* Dungeon CrawlerTests */,
+				F5ACE24721A5BEF100B6DDF0 /* Dungeon CrawlerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5ACE22321A5BEF000B6DDF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5ACE23521A5BEF100B6DDF0 /* LaunchScreen.storyboard in Resources */,
+				F5ACE23221A5BEF100B6DDF0 /* Assets.xcassets in Resources */,
+				F5ACE23021A5BEF000B6DDF0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5ACE23B21A5BEF100B6DDF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5ACE24621A5BEF100B6DDF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5ACE22121A5BEF000B6DDF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5ACE22D21A5BEF000B6DDF0 /* ViewController.m in Sources */,
+				F5ACE23821A5BEF100B6DDF0 /* main.m in Sources */,
+				F5ACE22A21A5BEF000B6DDF0 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5ACE23921A5BEF100B6DDF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5ACE24221A5BEF100B6DDF0 /* Dungeon_CrawlerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5ACE24421A5BEF100B6DDF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5ACE24D21A5BEF100B6DDF0 /* Dungeon_CrawlerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5ACE23F21A5BEF100B6DDF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5ACE22421A5BEF000B6DDF0 /* Dungeon Crawler */;
+			targetProxy = F5ACE23E21A5BEF100B6DDF0 /* PBXContainerItemProxy */;
+		};
+		F5ACE24A21A5BEF100B6DDF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5ACE22421A5BEF000B6DDF0 /* Dungeon Crawler */;
+			targetProxy = F5ACE24921A5BEF100B6DDF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5ACE22E21A5BEF000B6DDF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5ACE22F21A5BEF000B6DDF0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5ACE23321A5BEF100B6DDF0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5ACE23421A5BEF100B6DDF0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5ACE24F21A5BEF100B6DDF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F5ACE25021A5BEF100B6DDF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5ACE25221A5BEF100B6DDF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeon Crawler/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "george4768.Dungeon-Crawler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5ACE25321A5BEF100B6DDF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeon Crawler/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "george4768.Dungeon-Crawler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5ACE25521A5BEF100B6DDF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeon CrawlerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "george4768.Dungeon-CrawlerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dungeon Crawler.app/Dungeon Crawler";
+			};
+			name = Debug;
+		};
+		F5ACE25621A5BEF100B6DDF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeon CrawlerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "george4768.Dungeon-CrawlerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dungeon Crawler.app/Dungeon Crawler";
+			};
+			name = Release;
+		};
+		F5ACE25821A5BEF100B6DDF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeon CrawlerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "george4768.Dungeon-CrawlerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dungeon Crawler";
+			};
+			name = Debug;
+		};
+		F5ACE25921A5BEF100B6DDF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeon CrawlerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "george4768.Dungeon-CrawlerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dungeon Crawler";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5ACE22021A5BEF000B6DDF0 /* Build configuration list for PBXProject "Dungeon Crawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5ACE24F21A5BEF100B6DDF0 /* Debug */,
+				F5ACE25021A5BEF100B6DDF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5ACE25121A5BEF100B6DDF0 /* Build configuration list for PBXNativeTarget "Dungeon Crawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5ACE25221A5BEF100B6DDF0 /* Debug */,
+				F5ACE25321A5BEF100B6DDF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5ACE25421A5BEF100B6DDF0 /* Build configuration list for PBXNativeTarget "Dungeon CrawlerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5ACE25521A5BEF100B6DDF0 /* Debug */,
+				F5ACE25621A5BEF100B6DDF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5ACE25721A5BEF100B6DDF0 /* Build configuration list for PBXNativeTarget "Dungeon CrawlerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5ACE25821A5BEF100B6DDF0 /* Debug */,
+				F5ACE25921A5BEF100B6DDF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5ACE21D21A5BEF000B6DDF0 /* Project object */;
+}

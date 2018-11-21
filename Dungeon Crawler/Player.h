@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  Header.h
 //  Dungeon Crawler
 //
 //  Created by George on 2018-11-21.
@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Entity.h"
 
-@interface ViewController : UIViewController
+@interface Player : Entity
 
+- (id)initWithHealth:(int)hp xPos:(int)x yPos:(int)y;
 
 @end
 

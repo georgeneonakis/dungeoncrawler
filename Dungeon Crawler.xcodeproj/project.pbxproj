@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		F5ACE22A21A5BEF000B6DDF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */; };
-		F5ACE22D21A5BEF000B6DDF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22C21A5BEF000B6DDF0 /* ViewController.m */; };
+		F5ACE22D21A5BEF000B6DDF0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22C21A5BEF000B6DDF0 /* GameViewController.m */; };
 		F5ACE23021A5BEF000B6DDF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5ACE22E21A5BEF000B6DDF0 /* Main.storyboard */; };
 		F5ACE23221A5BEF100B6DDF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5ACE23121A5BEF100B6DDF0 /* Assets.xcassets */; };
 		F5ACE23521A5BEF100B6DDF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5ACE23321A5BEF100B6DDF0 /* LaunchScreen.storyboard */; };
 		F5ACE23821A5BEF100B6DDF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE23721A5BEF100B6DDF0 /* main.m */; };
 		F5ACE24221A5BEF100B6DDF0 /* Dungeon_CrawlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE24121A5BEF100B6DDF0 /* Dungeon_CrawlerTests.m */; };
 		F5ACE24D21A5BEF100B6DDF0 /* Dungeon_CrawlerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE24C21A5BEF100B6DDF0 /* Dungeon_CrawlerUITests.m */; };
+		F5ACE25B21A5C32100B6DDF0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE25A21A5C32100B6DDF0 /* Player.m */; };
+		F5ACE25E21A5C67D00B6DDF0 /* GameEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE25D21A5C67D00B6DDF0 /* GameEngine.m */; };
+		F5ACE26221A5CBB700B6DDF0 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE26121A5CBB700B6DDF0 /* Tile.m */; };
+		F5ACE26521A5CE6C00B6DDF0 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE26421A5CE6C00B6DDF0 /* GameObject.m */; };
+		F5ACE26821A5CF8400B6DDF0 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE26721A5CF8400B6DDF0 /* Entity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +43,8 @@
 		F5ACE22521A5BEF000B6DDF0 /* Dungeon Crawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Crawler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5ACE22821A5BEF000B6DDF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F5ACE22B21A5BEF000B6DDF0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F5ACE22C21A5BEF000B6DDF0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5ACE22B21A5BEF000B6DDF0 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		F5ACE22C21A5BEF000B6DDF0 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		F5ACE22F21A5BEF000B6DDF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5ACE23121A5BEF100B6DDF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5ACE23421A5BEF100B6DDF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +56,16 @@
 		F5ACE24821A5BEF100B6DDF0 /* Dungeon CrawlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeon CrawlerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5ACE24C21A5BEF100B6DDF0 /* Dungeon_CrawlerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dungeon_CrawlerUITests.m; sourceTree = "<group>"; };
 		F5ACE24E21A5BEF100B6DDF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5ACE25A21A5C32100B6DDF0 /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		F5ACE25C21A5C32F00B6DDF0 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		F5ACE25D21A5C67D00B6DDF0 /* GameEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameEngine.m; sourceTree = "<group>"; };
+		F5ACE25F21A5C68800B6DDF0 /* GameEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
+		F5ACE26021A5CA4400B6DDF0 /* Tile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		F5ACE26121A5CBB700B6DDF0 /* Tile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		F5ACE26321A5CE5F00B6DDF0 /* GameObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		F5ACE26421A5CE6C00B6DDF0 /* GameObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		F5ACE26621A5CF7A00B6DDF0 /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		F5ACE26721A5CF8400B6DDF0 /* Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +118,23 @@
 			children = (
 				F5ACE22821A5BEF000B6DDF0 /* AppDelegate.h */,
 				F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */,
-				F5ACE22B21A5BEF000B6DDF0 /* ViewController.h */,
-				F5ACE22C21A5BEF000B6DDF0 /* ViewController.m */,
+				F5ACE22B21A5BEF000B6DDF0 /* GameViewController.h */,
+				F5ACE22C21A5BEF000B6DDF0 /* GameViewController.m */,
 				F5ACE22E21A5BEF000B6DDF0 /* Main.storyboard */,
 				F5ACE23121A5BEF100B6DDF0 /* Assets.xcassets */,
 				F5ACE23321A5BEF100B6DDF0 /* LaunchScreen.storyboard */,
 				F5ACE23621A5BEF100B6DDF0 /* Info.plist */,
 				F5ACE23721A5BEF100B6DDF0 /* main.m */,
+				F5ACE25A21A5C32100B6DDF0 /* Player.m */,
+				F5ACE25C21A5C32F00B6DDF0 /* Player.h */,
+				F5ACE25D21A5C67D00B6DDF0 /* GameEngine.m */,
+				F5ACE25F21A5C68800B6DDF0 /* GameEngine.h */,
+				F5ACE26021A5CA4400B6DDF0 /* Tile.h */,
+				F5ACE26121A5CBB700B6DDF0 /* Tile.m */,
+				F5ACE26321A5CE5F00B6DDF0 /* GameObject.h */,
+				F5ACE26421A5CE6C00B6DDF0 /* GameObject.m */,
+				F5ACE26621A5CF7A00B6DDF0 /* Entity.h */,
+				F5ACE26721A5CF8400B6DDF0 /* Entity.m */,
 			);
 			path = "Dungeon Crawler";
 			sourceTree = "<group>";
@@ -262,8 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5ACE22D21A5BEF000B6DDF0 /* ViewController.m in Sources */,
+				F5ACE26821A5CF8400B6DDF0 /* Entity.m in Sources */,
+				F5ACE25B21A5C32100B6DDF0 /* Player.m in Sources */,
+				F5ACE26521A5CE6C00B6DDF0 /* GameObject.m in Sources */,
+				F5ACE26221A5CBB700B6DDF0 /* Tile.m in Sources */,
+				F5ACE22D21A5BEF000B6DDF0 /* GameViewController.m in Sources */,
 				F5ACE23821A5BEF100B6DDF0 /* main.m in Sources */,
+				F5ACE25E21A5C67D00B6DDF0 /* GameEngine.m in Sources */,
 				F5ACE22A21A5BEF000B6DDF0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

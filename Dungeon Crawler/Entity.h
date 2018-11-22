@@ -15,5 +15,6 @@
 
 -(id)initWithX:(int)x Y:(int)y Blocks:(bool)blocks Health:(int)hp;
 -(void)causeDamage:(int)amount;
+-(void)movePositionByX:(int)x Y:(int)y;
 
 @end

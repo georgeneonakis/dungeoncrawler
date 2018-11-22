@@ -11,7 +11,5 @@
 
 @interface Player : Entity
 
-- (id)initWithHealth:(int)hp xPos:(int)x yPos:(int)y;
-
 @end
 

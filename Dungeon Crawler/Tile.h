@@ -15,11 +15,12 @@
     bool isDamaging;
 }
 
-@property (weak, nonatomic) Entity *object;
+@property (weak, nonatomic) GameObject *object;
 
 -(id)init;
 -(bool)isDamage;
 -(void)setDamageWithAmount:(int)amount time:(int)time;
 -(void)causeDamage;
+-(void)tick;
 
 @end

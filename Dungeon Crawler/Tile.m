@@ -28,7 +28,20 @@
 }
 
 -(void)causeDamage {
-    [object causeDamage:damageAmount];
+    if ([object isKindOfClass:[Entity class]]) {
+        [(Entity*)object causeDamage:damageAmount];
+    }
+}
+
+-(void)tick {
+    if (isDamaging) {
+        [self causeDamage];
+        damageTime--;
+        if (damageTime == 0) {
+            isDamaging = false;
+            damageAmount = 0;
+        }
+    }
 }
 
 @end

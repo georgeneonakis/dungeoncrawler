@@ -15,7 +15,6 @@
 }
 
 -(id)initWithX:(int)x Y:(int)y Blocks:(bool)block;
--(void)movePositionByX:(int)x Y:(int)y;
 -(int)getXPosition;
 -(int)getYPosition;
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F54D5F5621A70F5E009563C1 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F54D5F5521A70F5E009563C1 /* Enemy.m */; };
 		F5ACE22A21A5BEF000B6DDF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */; };
 		F5ACE22D21A5BEF000B6DDF0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22C21A5BEF000B6DDF0 /* GameViewController.m */; };
 		F5ACE23021A5BEF000B6DDF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5ACE22E21A5BEF000B6DDF0 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F54D5F5421A70F4D009563C1 /* Enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		F54D5F5521A70F5E009563C1 /* Enemy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		F5ACE22521A5BEF000B6DDF0 /* Dungeon Crawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Crawler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5ACE22821A5BEF000B6DDF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				F5ACE26421A5CE6C00B6DDF0 /* GameObject.m */,
 				F5ACE26621A5CF7A00B6DDF0 /* Entity.h */,
 				F5ACE26721A5CF8400B6DDF0 /* Entity.m */,
+				F54D5F5421A70F4D009563C1 /* Enemy.h */,
+				F54D5F5521A70F5E009563C1 /* Enemy.m */,
 			);
 			path = "Dungeon Crawler";
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54D5F5621A70F5E009563C1 /* Enemy.m in Sources */,
 				F5ACE26821A5CF8400B6DDF0 /* Entity.m in Sources */,
 				F5ACE25B21A5C32100B6DDF0 /* Player.m in Sources */,
 				F5ACE26521A5CE6C00B6DDF0 /* GameObject.m in Sources */,

@@ -11,9 +11,4 @@
 
 @implementation Player
 
-- (id)initWithHealth:(int)hp xPos:(int)x yPos:(int)y {
-    self = [super initWithX:x Y:y Blocks:false Health:hp];
-    return self;
-}
-
 @end

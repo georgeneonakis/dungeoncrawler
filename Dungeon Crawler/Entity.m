@@ -20,4 +20,9 @@
     health -= amount;
 }
 
+-(void)movePositionByX:(int)x Y:(int)y {
+    xPos += x;
+    yPos += y;
+}
+
 @end

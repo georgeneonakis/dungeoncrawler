@@ -18,11 +18,6 @@
     return self;
 }
 
--(void)movePositionByX:(int)x Y:(int)y {
-    xPos += x;
-    yPos += y;
-}
-
 -(int)getXPosition {
     return xPos;
 }

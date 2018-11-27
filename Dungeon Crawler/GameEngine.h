@@ -10,14 +10,16 @@
 #import "Player.h"
 #import "Enemy.h"
 #import "Tile.h"
+#import "Grid.h"
 
 @interface GameEngine : NSObject
 
 @property (strong, nonatomic) Player *player;
 @property (strong, nonatomic) NSMutableArray *grid;
 @property (strong, nonatomic) NSMutableArray *entityManager;
+@property (weak, nonatomic) Grid *gridView;
 
--(id)init;
+-(id)initWithGrid:(Grid*)g;
 -(void)nextFrame;
 -(void)updatePositionOfEntity:(Entity*)entity ByX:(int)x Y:(int)y;
 -(void)spawnEntities;

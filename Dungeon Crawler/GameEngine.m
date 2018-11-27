@@ -10,10 +10,12 @@
 
 @implementation GameEngine
 
-@synthesize player, grid, entityManager;
+@synthesize player, grid, entityManager, gridView;
 
--(id)init {
+-(id)initWithGrid:(Grid*)g {
     self = [super init];
+    self.gridView = g;
+    srand(time(NULL));
     self.grid = [[NSMutableArray alloc] initWithCapacity:5];
     for (int i = 0; i < 5; i++) {
         self.grid[i] = [[NSMutableArray alloc] initWithObjects:
@@ -21,9 +23,6 @@
     }
     self.entityManager = [[NSMutableArray alloc] initWithCapacity:10];
     [self spawnEntities];
-    for (int i = 0; i < [self.entityManager count]; i++) {
-        NSLog(@"%d, %d", [self.entityManager[i] getXPosition], [self.entityManager[i] getXPosition]);
-    }
     return self;
 }
 
@@ -38,6 +37,8 @@
     currentX += x;
     currentY += y;
     ((Tile*)self.grid[currentX][currentY]).object = entity;
+    UIColor *entityColor = [UIColor redColor];
+    [self.gridView changeColorOfTileAtX:currentX Y:currentY Color:entityColor];
     [entity movePositionByX:x Y:y];
 }
 
@@ -46,16 +47,20 @@
     int playerX = [self.player getXPosition];
     int playerY = [self.player getYPosition];
     ((Tile*)self.grid[playerX][playerY]).object = self.player;
+    UIColor *playerColor = [UIColor blueColor];
+    [self.gridView changeColorOfTileAtX:playerX Y:playerY Color:playerColor];
     [self.entityManager addObject:self.player];
     for (int i = 0; i < 3; i++) {
-        int currentX = arc4random_uniform(5);
-        int currentY = arc4random_uniform(5);
+        int currentX = rand() % 5;
+        int currentY = rand() % 5;
         while (((Tile*)self.grid[currentX][currentY]).object != nil) {
-            currentX = arc4random_uniform(5);
-            currentY = arc4random_uniform(5);
+            currentX = rand() % 5;
+            currentY = rand() % 5;
         }
         Enemy *newEnemy = [[Enemy alloc] initWithX:currentX Y:currentY Blocks:false Health:1];
         ((Tile*)self.grid[currentX][currentY]).object = newEnemy;
+        UIColor *enemyColor = [UIColor redColor];
+        [self.gridView changeColorOfTileAtX:currentX Y:currentY Color:enemyColor];
         [self.entityManager addObject:newEnemy];
     }
 }

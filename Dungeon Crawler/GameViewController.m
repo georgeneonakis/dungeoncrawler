@@ -18,8 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.engine = [[GameEngine alloc] init];
+    self.gameGrid = [[Grid alloc] initWithWidth:5 Height:5];
+    self.engine = [[GameEngine alloc] initWithGrid:self.gameGrid];
     buttonTag = 0;
+    [self.view addSubview:self.gameGrid];
 }
 
 -(IBAction)buttonPressed:(UIButton*)sender {

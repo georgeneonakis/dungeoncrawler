@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Player.h"
 #import "GameEngine.h"
+#import "Grid.h"
 
 @interface GameViewController : UIViewController {
     int buttonTag;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *hp3;
 @property (weak, nonatomic) IBOutlet UIView *hp4;
 @property (weak, nonatomic) IBOutlet UIView *hp5;
+@property (strong, nonatomic) Grid *gameGrid;
 @property (strong, nonatomic) GameEngine *engine;
 
 -(IBAction)buttonPressed:(UIButton*)sender;

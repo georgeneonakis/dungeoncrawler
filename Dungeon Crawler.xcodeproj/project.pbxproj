@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F54D5F5621A70F5E009563C1 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F54D5F5521A70F5E009563C1 /* Enemy.m */; };
+		F5A7543A21AEFFC800CBA93C /* Ability.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7543921AEFFC800CBA93C /* Ability.m */; };
 		F5ACE22A21A5BEF000B6DDF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */; };
 		F5ACE22D21A5BEF000B6DDF0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22C21A5BEF000B6DDF0 /* GameViewController.m */; };
 		F5ACE23021A5BEF000B6DDF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5ACE22E21A5BEF000B6DDF0 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		F54D5F5421A70F4D009563C1 /* Enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		F54D5F5521A70F5E009563C1 /* Enemy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		F5A7543821AEFFB500CBA93C /* Ability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ability.h; sourceTree = "<group>"; };
+		F5A7543921AEFFC800CBA93C /* Ability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ability.m; sourceTree = "<group>"; };
 		F5ACE22521A5BEF000B6DDF0 /* Dungeon Crawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeon Crawler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5ACE22821A5BEF000B6DDF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				F5C3232B21AD9B9C0067E5FB /* TileView.m */,
 				F5C3232D21AD9F230067E5FB /* Grid.h */,
 				F5C3232E21AD9F2C0067E5FB /* Grid.m */,
+				F5A7543821AEFFB500CBA93C /* Ability.h */,
+				F5A7543921AEFFC800CBA93C /* Ability.m */,
 			);
 			path = "Dungeon Crawler";
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				F5C3232C21AD9B9C0067E5FB /* TileView.m in Sources */,
 				F5ACE25B21A5C32100B6DDF0 /* Player.m in Sources */,
 				F5ACE26521A5CE6C00B6DDF0 /* GameObject.m in Sources */,
+				F5A7543A21AEFFC800CBA93C /* Ability.m in Sources */,
 				F5ACE26221A5CBB700B6DDF0 /* Tile.m in Sources */,
 				F5ACE22D21A5BEF000B6DDF0 /* GameViewController.m in Sources */,
 				F5ACE23821A5BEF100B6DDF0 /* main.m in Sources */,

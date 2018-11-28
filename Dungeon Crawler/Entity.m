@@ -10,19 +10,29 @@
 
 @implementation Entity
 
+@synthesize health, direction, entityIndex;
+
 -(id)initWithX:(int)x Y:(int)y Blocks:(bool)blocks Health:(int)hp {
     self = [super initWithX:x Y:y Blocks:blocks];
-    health = hp;
+    self.health = hp;
+    self.direction = 2;
     return self;
 }
 
 -(void)causeDamage:(int)amount {
-    health -= amount;
+    self.health -= amount;
+    if (self.health < 0) {
+        self.health = 0;
+    }
 }
 
--(void)movePositionByX:(int)x Y:(int)y {
-    xPos += x;
-    yPos += y;
+-(void)movePositionToX:(int)x Y:(int)y {
+    xPos = x;
+    yPos = y;
+}
+
+-(void)attack {
+    [self.delegate applyAbility:self.abilities[0] AtBaseX:xPos BaseY:yPos Direction:self.direction];
 }
 
 @end

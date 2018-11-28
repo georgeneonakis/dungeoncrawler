@@ -12,7 +12,7 @@
 #import "Tile.h"
 #import "Grid.h"
 
-@interface GameEngine : NSObject
+@interface GameEngine : NSObject<EntityDelegate>
 
 @property (strong, nonatomic) Player *player;
 @property (strong, nonatomic) NSMutableArray *grid;
@@ -23,5 +23,6 @@
 -(void)nextFrame;
 -(void)updatePositionOfEntity:(Entity*)entity ByX:(int)x Y:(int)y;
 -(void)spawnEntities;
+-(void)applyAbility:(Ability *)a AtBaseX:(int)x BaseY:(int)y Direction:(int)direction;
 
 @end

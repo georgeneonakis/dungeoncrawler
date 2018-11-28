@@ -12,18 +12,19 @@
 
 @synthesize tiles;
 
--(id)initWithSize:(int)size {
-    self = [self initWithWidth:size Height:size];
+-(id)initWithSize:(int)size xPos:(int)x yPos:(int)y tileSize:(int)s {
+    self = [self initWithWidth:size Height:size xPos:x yPos:y tileSize:s];
     return self;
 }
 
--(id)initWithWidth:(int)width Height:(int)height {
-    self = [super initWithFrame:CGRectMake(30, 160, width*64, height*64)];
-    self.tiles = [[NSMutableArray alloc] initWithCapacity:width];
-    for (int i = 0; i < width; i++) {
-        NSMutableArray *row = [[NSMutableArray alloc] initWithCapacity:height];
-        for (int j = 0; j < height; j++) {
-            TileView *tile = [[TileView alloc] initWithFrame:CGRectMake(i*64, j*64, 64, 64)];
+-(id)initWithWidth:(int)width Height:(int)height xPos:(int)x yPos:(int)y tileSize:(int)s {
+    self = [super initWithFrame:CGRectMake(x, y, width*s, height*s)];
+    self.tiles = [[NSMutableArray alloc] initWithCapacity:height];
+    for (int i = 0; i < height; i++) {
+        NSMutableArray *row = [[NSMutableArray alloc] initWithCapacity:width];
+        for (int j = 0; j < width; j++) {
+            TileView *tile = [[TileView alloc] initWithFrame:CGRectMake(j*s, i*s, s, s)];
+            [tile changeColor:[UIColor whiteColor]];
             [row addObject:tile];
             [self addSubview:tile];
         }
@@ -33,8 +34,15 @@
 }
 
 -(void)changeColorOfTileAtX:(int)x Y:(int)y Color:(UIColor *)color {
-    NSLog(@"x:%d, y:%d", x, y);
-    [[[self.tiles objectAtIndex:x] objectAtIndex:y] changeColor:color];
+    [[[self.tiles objectAtIndex:y] objectAtIndex:x] changeColor:color];
+}
+
+-(int)getWidth {
+    return (int)[self.tiles[0] count];
+}
+
+-(int)getHeight {
+    return (int)[self.tiles count];
 }
 
 @end

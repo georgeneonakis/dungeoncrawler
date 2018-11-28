@@ -11,8 +11,6 @@
 
 @interface Enemy : Entity
 
-@property (strong, nonatomic) NSMutableArray *attackPattern;
-
 -(void)attack;
 
 @end

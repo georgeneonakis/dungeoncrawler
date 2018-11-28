@@ -10,10 +10,12 @@
 
 @implementation Enemy
 
-@synthesize attackPattern;
-
--(void)attack {
-    
+-(void)causeDamage:(int)amount {
+    [super causeDamage:amount];
+    if (self.health == 0) {
+        NSLog(@"I'm dead");
+        [self.delegate destroyEntityAtIndex:self.entityIndex];
+    }
 }
 
 @end

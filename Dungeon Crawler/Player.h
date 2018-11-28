@@ -9,7 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "Entity.h"
 
+@protocol PlayerDelegate <NSObject>
+
+-(void)playerTakeDamage:(int)amount;
+
+@end
+
 @interface Player : Entity
+
+@property id<PlayerDelegate> gvc;
+
+-(id)initWithX:(int)x Y:(int)y Blocks:(bool)blocks Health:(int)hp;
+-(void)causeDamage:(int)amount;
 
 @end
 

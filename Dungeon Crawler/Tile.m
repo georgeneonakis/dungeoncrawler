@@ -14,32 +14,47 @@
 
 -(id)init {
     self = [super init];
+    self.isDamaging = false;
+    self.isDelayed = false;
     return self;
 }
 
 -(bool)isDamage {
-    return isDamaging;
+    return self.isDamaging;
 }
 
--(void)setDamageWithAmount:(int)amount time:(int)time {
-    damageAmount = amount;
-    damageTime = time;
-    isDamaging = true;
+-(void)setDamageWithAmount:(int)amount time:(int)time after:(int)delay {
+    self.damageDelay = delay;
+    self.damageAmount = amount;
+    self.damageTime = time;
+    if (delay != 0) {
+        self.isDelayed = true;
+    }
+    else {
+        self.isDamaging = true;
+    }
 }
 
 -(void)causeDamage {
     if ([object isKindOfClass:[Entity class]]) {
-        [(Entity*)object causeDamage:damageAmount];
+        [(Entity*)object causeDamage:self.damageAmount];
     }
 }
 
 -(void)tick {
-    if (isDamaging) {
+    if (self.isDelayed) {
+        if (self.damageDelay == 0) {
+            self.isDelayed = false;
+            self.isDamaging = true;
+        }
+        self.damageDelay--;
+    }
+    else if (self.isDamaging) {
         [self causeDamage];
-        damageTime--;
-        if (damageTime == 0) {
-            isDamaging = false;
-            damageAmount = 0;
+        self.damageTime--;
+        if (self.damageTime == 0) {
+            self.isDamaging = false;
+            self.damageAmount = 0;
         }
     }
 }

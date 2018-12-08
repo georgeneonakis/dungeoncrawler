@@ -24,11 +24,26 @@
         }
     }
     self.entityManager = [[NSMutableArray alloc] initWithCapacity:10];
-    [self spawnEntities];
+    self.player = [[Player alloc] initWithX:0 Y:0 Blocks:false Health:5];
+    int playerX = [self.player getXPosition];
+    int playerY = [self.player getYPosition];
+    ((Tile*)self.grid[playerX][playerY]).object = self.player;
+    [((TileView*)self.gridView.tiles[playerY][playerX]) addSubview: self.player.objectImageView];
+    [self.entityManager addObject:self.player];
+    self.player.entityIndex = [self.entityManager count] - 1;
+    self.player.delegate = self;
+    self.enemyCount = 2;
+    [self spawnEntities:self.enemyCount];
     return self;
 }
 
 -(void)nextFrame {
+    if ([self.entityManager count] <= 1) {
+        self.enemyCount += 1;
+        [self spawnEntities:self.enemyCount];
+        [self.player causeDamage:(self.player.health - 5)];
+        return;
+    }
     for (int i = 0; i < [grid count]; i++) {
         for (int j = 0; j < [grid[0] count]; j++) {
             [grid[i][j] tick];
@@ -119,16 +134,8 @@
     [entity movePositionToX:currentX Y:currentY];
 }
 
--(void)spawnEntities {
-    self.player = [[Player alloc] initWithX:0 Y:0 Blocks:false Health:5];
-    int playerX = [self.player getXPosition];
-    int playerY = [self.player getYPosition];
-    ((Tile*)self.grid[playerX][playerY]).object = self.player;
-    [((TileView*)self.gridView.tiles[playerY][playerX]) addSubview: self.player.objectImageView];
-    [self.entityManager addObject:self.player];
-    self.player.entityIndex = [self.entityManager count] - 1;
-    self.player.delegate = self;
-    for (int i = 0; i < 3; i++) {
+-(void)spawnEntities:(int)number {
+    for (int i = 0; i < number; i++) {
         int currentX = rand() % 5;
         int currentY = rand() % 5;
         while (((Tile*)self.grid[currentX][currentY]).object != nil) {

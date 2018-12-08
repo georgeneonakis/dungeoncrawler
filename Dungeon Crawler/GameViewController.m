@@ -111,14 +111,17 @@
     }
 }
 
--(void)playerTakeDamage:(int)amount {
+-(void)playerHPChanged {
     int hp = self.engine.player.health;
     UIImage *noHealth = [UIImage imageNamed: @"HealthPoint_Sprite1.png"];
+    UIImage *health = [UIImage imageNamed: @"HealthPoint_Sprite0.png"];
     for (int i = 4; i >= hp; i--) {
         ((TileView *)self.hpGrid.tiles[0][i]).tileImageView.image = noHealth;
     }
+    for (int i = 0; i < hp; i++) {
+        ((TileView *)self.hpGrid.tiles[0][i]).tileImageView.image = health;
+    }
     if (hp == 0) {
-        UIImage *someHealth = [UIImage imageNamed: @"HealthPoint_Sprite0.png"];
         NSLog(@"Game Over!");
         [self loadGame];
     }

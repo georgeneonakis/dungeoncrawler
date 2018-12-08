@@ -18,11 +18,12 @@
 @property (strong, nonatomic) NSMutableArray *grid;
 @property (strong, nonatomic) NSMutableArray *entityManager;
 @property (weak, nonatomic) Grid *gridView;
+@property int enemyCount;
 
 -(id)initWithGrid:(Grid*)g;
 -(void)nextFrame;
 -(void)updatePositionOfEntity:(Entity*)entity ByX:(int)x Y:(int)y;
--(void)spawnEntities;
+-(void)spawnEntities:(int)number;
 -(void)applyAbility:(Ability *)a AtBaseX:(int)x BaseY:(int)y Direction:(int)direction;
 
 @end

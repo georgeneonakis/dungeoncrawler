@@ -115,7 +115,7 @@
 
 -(void)causeDamage:(int)amount {
     [super causeDamage:amount];
-    [gvc playerTakeDamage:amount];
+    [gvc playerHPChanged];
 }
 
 @end

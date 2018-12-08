@@ -28,7 +28,7 @@
 
 -(void) loadGame;
 -(IBAction)buttonPressed:(UIButton*)sender;
--(void)playerTakeDamage:(int)amount;
+-(void)playerHPChanged;
 -(void)swipeLeftRight:(UISwipeGestureRecognizer *)swiper;
 -(void)swipeUpDown:(UISwipeGestureRecognizer *)swiper;
 -(void)tap:(UITapGestureRecognizer *)tapper;

@@ -11,7 +11,7 @@
 
 @protocol PlayerDelegate <NSObject>
 
--(void)playerTakeDamage:(int)amount;
+-(void)playerHPChanged;
 
 @end
 

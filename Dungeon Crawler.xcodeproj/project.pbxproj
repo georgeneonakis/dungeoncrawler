@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C413E53621B02E4F00CDA22D /* HealthPoint_Sprite1.png in Resources */ = {isa = PBXBuildFile; fileRef = C413E53421B02E4F00CDA22D /* HealthPoint_Sprite1.png */; };
+		C413E53721B02E4F00CDA22D /* HealthPoint_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C413E53521B02E4F00CDA22D /* HealthPoint_Sprite0.png */; };
+		C413E53C21B031AF00CDA22D /* DownArrow_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C413E53821B031AF00CDA22D /* DownArrow_Sprite0.png */; };
+		C413E53D21B031AF00CDA22D /* UpArrow_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C413E53921B031AF00CDA22D /* UpArrow_Sprite0.png */; };
+		C413E53E21B031AF00CDA22D /* LeftArrow_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C413E53A21B031AF00CDA22D /* LeftArrow_Sprite0.png */; };
+		C413E53F21B031AF00CDA22D /* RightArrow_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C413E53B21B031AF00CDA22D /* RightArrow_Sprite0.png */; };
+		C413E54221B03F1200CDA22D /* AButton_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C413E54021B03F1200CDA22D /* AButton_Sprite0.png */; };
+		C413E54321B03F1200CDA22D /* BButton_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C413E54121B03F1200CDA22D /* BButton_Sprite0.png */; };
+		C4CE7E3E21AFA52E00D0D60A /* Player_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3021AFA52C00D0D60A /* Player_Sprite0.png */; };
+		C4CE7E4021AFA52E00D0D60A /* Forest_Pit1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3221AFA52C00D0D60A /* Forest_Pit1.png */; };
+		C4CE7E4121AFA52E00D0D60A /* Forest_Hedge3.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3321AFA52C00D0D60A /* Forest_Hedge3.png */; };
+		C4CE7E4221AFA52E00D0D60A /* Forest_Pit0.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3421AFA52D00D0D60A /* Forest_Pit0.png */; };
+		C4CE7E4321AFA52E00D0D60A /* Forest_Tile0.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3521AFA52D00D0D60A /* Forest_Tile0.png */; };
+		C4CE7E4421AFA52E00D0D60A /* Forest_Tile1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3621AFA52D00D0D60A /* Forest_Tile1.png */; };
+		C4CE7E4521AFA52E00D0D60A /* Forest_wall2.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3721AFA52D00D0D60A /* Forest_wall2.png */; };
+		C4CE7E4621AFA52E00D0D60A /* Forest_Hedge2.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3821AFA52D00D0D60A /* Forest_Hedge2.png */; };
+		C4CE7E4721AFA52E00D0D60A /* Forest_wall0.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3921AFA52D00D0D60A /* Forest_wall0.png */; };
+		C4CE7E4821AFA52E00D0D60A /* Forest_Pit2.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3A21AFA52D00D0D60A /* Forest_Pit2.png */; };
+		C4CE7E4921AFA52E00D0D60A /* Forest_wall1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3B21AFA52E00D0D60A /* Forest_wall1.png */; };
+		C4CE7E4A21AFA52E00D0D60A /* Slime_Enemy_Sprite0.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3C21AFA52E00D0D60A /* Slime_Enemy_Sprite0.png */; };
+		C4CE7E4B21AFA52E00D0D60A /* Forest_Hedge1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E3D21AFA52E00D0D60A /* Forest_Hedge1.png */; };
+		C4CE7E4F21AFB01400D0D60A /* Item_GoldBag.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E4E21AFB01400D0D60A /* Item_GoldBag.png */; };
+		C4CE7E5121AFB04B00D0D60A /* Forest_Hedge0.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CE7E5021AFB04B00D0D60A /* Forest_Hedge0.png */; };
 		F54D5F5621A70F5E009563C1 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F54D5F5521A70F5E009563C1 /* Enemy.m */; };
 		F5A7543A21AEFFC800CBA93C /* Ability.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A7543921AEFFC800CBA93C /* Ability.m */; };
 		F5ACE22A21A5BEF000B6DDF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE22921A5BEF000B6DDF0 /* AppDelegate.m */; };
@@ -44,6 +67,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C413E53421B02E4F00CDA22D /* HealthPoint_Sprite1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealthPoint_Sprite1.png; sourceTree = "<group>"; };
+		C413E53521B02E4F00CDA22D /* HealthPoint_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HealthPoint_Sprite0.png; sourceTree = "<group>"; };
+		C413E53821B031AF00CDA22D /* DownArrow_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownArrow_Sprite0.png; sourceTree = "<group>"; };
+		C413E53921B031AF00CDA22D /* UpArrow_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpArrow_Sprite0.png; sourceTree = "<group>"; };
+		C413E53A21B031AF00CDA22D /* LeftArrow_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftArrow_Sprite0.png; sourceTree = "<group>"; };
+		C413E53B21B031AF00CDA22D /* RightArrow_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RightArrow_Sprite0.png; sourceTree = "<group>"; };
+		C413E54021B03F1200CDA22D /* AButton_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AButton_Sprite0.png; sourceTree = "<group>"; };
+		C413E54121B03F1200CDA22D /* BButton_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BButton_Sprite0.png; sourceTree = "<group>"; };
+		C4CE7E3021AFA52C00D0D60A /* Player_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player_Sprite0.png; sourceTree = "<group>"; };
+		C4CE7E3221AFA52C00D0D60A /* Forest_Pit1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Pit1.png; sourceTree = "<group>"; };
+		C4CE7E3321AFA52C00D0D60A /* Forest_Hedge3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Hedge3.png; sourceTree = "<group>"; };
+		C4CE7E3421AFA52D00D0D60A /* Forest_Pit0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Pit0.png; sourceTree = "<group>"; };
+		C4CE7E3521AFA52D00D0D60A /* Forest_Tile0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Tile0.png; sourceTree = "<group>"; };
+		C4CE7E3621AFA52D00D0D60A /* Forest_Tile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Tile1.png; sourceTree = "<group>"; };
+		C4CE7E3721AFA52D00D0D60A /* Forest_wall2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_wall2.png; sourceTree = "<group>"; };
+		C4CE7E3821AFA52D00D0D60A /* Forest_Hedge2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Hedge2.png; sourceTree = "<group>"; };
+		C4CE7E3921AFA52D00D0D60A /* Forest_wall0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_wall0.png; sourceTree = "<group>"; };
+		C4CE7E3A21AFA52D00D0D60A /* Forest_Pit2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Pit2.png; sourceTree = "<group>"; };
+		C4CE7E3B21AFA52E00D0D60A /* Forest_wall1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_wall1.png; sourceTree = "<group>"; };
+		C4CE7E3C21AFA52E00D0D60A /* Slime_Enemy_Sprite0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slime_Enemy_Sprite0.png; sourceTree = "<group>"; };
+		C4CE7E3D21AFA52E00D0D60A /* Forest_Hedge1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Hedge1.png; sourceTree = "<group>"; };
+		C4CE7E4E21AFB01400D0D60A /* Item_GoldBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Item_GoldBag.png; sourceTree = "<group>"; };
+		C4CE7E5021AFB04B00D0D60A /* Forest_Hedge0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forest_Hedge0.png; sourceTree = "<group>"; };
 		F54D5F5421A70F4D009563C1 /* Enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		F54D5F5521A70F5E009563C1 /* Enemy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		F5A7543821AEFFB500CBA93C /* Ability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ability.h; sourceTree = "<group>"; };
@@ -105,6 +151,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4CE7E4D21AFA55200D0D60A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C413E54021B03F1200CDA22D /* AButton_Sprite0.png */,
+				C413E54121B03F1200CDA22D /* BButton_Sprite0.png */,
+				C413E53821B031AF00CDA22D /* DownArrow_Sprite0.png */,
+				C413E53A21B031AF00CDA22D /* LeftArrow_Sprite0.png */,
+				C413E53B21B031AF00CDA22D /* RightArrow_Sprite0.png */,
+				C413E53921B031AF00CDA22D /* UpArrow_Sprite0.png */,
+				C413E53521B02E4F00CDA22D /* HealthPoint_Sprite0.png */,
+				C413E53421B02E4F00CDA22D /* HealthPoint_Sprite1.png */,
+				C4CE7E5021AFB04B00D0D60A /* Forest_Hedge0.png */,
+				C4CE7E3D21AFA52E00D0D60A /* Forest_Hedge1.png */,
+				C4CE7E3821AFA52D00D0D60A /* Forest_Hedge2.png */,
+				C4CE7E3321AFA52C00D0D60A /* Forest_Hedge3.png */,
+				C4CE7E3421AFA52D00D0D60A /* Forest_Pit0.png */,
+				C4CE7E3221AFA52C00D0D60A /* Forest_Pit1.png */,
+				C4CE7E3A21AFA52D00D0D60A /* Forest_Pit2.png */,
+				C4CE7E3521AFA52D00D0D60A /* Forest_Tile0.png */,
+				C4CE7E3621AFA52D00D0D60A /* Forest_Tile1.png */,
+				C4CE7E3921AFA52D00D0D60A /* Forest_wall0.png */,
+				C4CE7E3B21AFA52E00D0D60A /* Forest_wall1.png */,
+				C4CE7E3721AFA52D00D0D60A /* Forest_wall2.png */,
+				C4CE7E4E21AFB01400D0D60A /* Item_GoldBag.png */,
+				C4CE7E3021AFA52C00D0D60A /* Player_Sprite0.png */,
+				C4CE7E3C21AFA52E00D0D60A /* Slime_Enemy_Sprite0.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		F5ACE21C21A5BEF000B6DDF0 = {
 			isa = PBXGroup;
 			children = (
@@ -137,14 +213,15 @@
 				F5ACE23321A5BEF100B6DDF0 /* LaunchScreen.storyboard */,
 				F5ACE23621A5BEF100B6DDF0 /* Info.plist */,
 				F5ACE23721A5BEF100B6DDF0 /* main.m */,
-				F5ACE25A21A5C32100B6DDF0 /* Player.m */,
 				F5ACE25C21A5C32F00B6DDF0 /* Player.h */,
-				F5ACE25D21A5C67D00B6DDF0 /* GameEngine.m */,
+				F5ACE25A21A5C32100B6DDF0 /* Player.m */,
 				F5ACE25F21A5C68800B6DDF0 /* GameEngine.h */,
+				F5ACE25D21A5C67D00B6DDF0 /* GameEngine.m */,
 				F5ACE26021A5CA4400B6DDF0 /* Tile.h */,
 				F5ACE26121A5CBB700B6DDF0 /* Tile.m */,
 				F5ACE26321A5CE5F00B6DDF0 /* GameObject.h */,
 				F5ACE26421A5CE6C00B6DDF0 /* GameObject.m */,
+				C4CE7E4D21AFA55200D0D60A /* Images */,
 				F5ACE26621A5CF7A00B6DDF0 /* Entity.h */,
 				F5ACE26721A5CF8400B6DDF0 /* Entity.m */,
 				F54D5F5421A70F4D009563C1 /* Enemy.h */,
@@ -280,9 +357,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4CE7E4021AFA52E00D0D60A /* Forest_Pit1.png in Resources */,
+				C4CE7E4B21AFA52E00D0D60A /* Forest_Hedge1.png in Resources */,
+				C413E54321B03F1200CDA22D /* BButton_Sprite0.png in Resources */,
+				C4CE7E4621AFA52E00D0D60A /* Forest_Hedge2.png in Resources */,
+				C4CE7E4221AFA52E00D0D60A /* Forest_Pit0.png in Resources */,
+				C413E53C21B031AF00CDA22D /* DownArrow_Sprite0.png in Resources */,
+				C4CE7E4121AFA52E00D0D60A /* Forest_Hedge3.png in Resources */,
+				C4CE7E3E21AFA52E00D0D60A /* Player_Sprite0.png in Resources */,
+				C413E53E21B031AF00CDA22D /* LeftArrow_Sprite0.png in Resources */,
+				C413E53F21B031AF00CDA22D /* RightArrow_Sprite0.png in Resources */,
+				C413E53621B02E4F00CDA22D /* HealthPoint_Sprite1.png in Resources */,
+				C413E53D21B031AF00CDA22D /* UpArrow_Sprite0.png in Resources */,
+				C4CE7E4321AFA52E00D0D60A /* Forest_Tile0.png in Resources */,
+				C413E54221B03F1200CDA22D /* AButton_Sprite0.png in Resources */,
+				C413E53721B02E4F00CDA22D /* HealthPoint_Sprite0.png in Resources */,
 				F5ACE23521A5BEF100B6DDF0 /* LaunchScreen.storyboard in Resources */,
+				C4CE7E4A21AFA52E00D0D60A /* Slime_Enemy_Sprite0.png in Resources */,
+				C4CE7E4921AFA52E00D0D60A /* Forest_wall1.png in Resources */,
+				C4CE7E4821AFA52E00D0D60A /* Forest_Pit2.png in Resources */,
+				C4CE7E4421AFA52E00D0D60A /* Forest_Tile1.png in Resources */,
 				F5ACE23221A5BEF100B6DDF0 /* Assets.xcassets in Resources */,
 				F5ACE23021A5BEF000B6DDF0 /* Main.storyboard in Resources */,
+				C4CE7E4721AFA52E00D0D60A /* Forest_wall0.png in Resources */,
+				C4CE7E4F21AFB01400D0D60A /* Item_GoldBag.png in Resources */,
+				C4CE7E4521AFA52E00D0D60A /* Forest_wall2.png in Resources */,
+				C4CE7E5121AFB04B00D0D60A /* Forest_Hedge0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +590,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SQGQLFMHK;
 				INFOPLIST_FILE = "Dungeon Crawler/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +608,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2SQGQLFMHK;
 				INFOPLIST_FILE = "Dungeon Crawler/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,7 +14,9 @@
     bool blocks;
 }
 
--(id)initWithX:(int)x Y:(int)y Blocks:(bool)block;
+@property (strong, nonatomic) UIImageView *objectImageView;
+
+-(id)initWithX:(int)x Y:(int)y Blocks:(bool)block Image:(NSString *)imageName;
 -(int)getXPosition;
 -(int)getYPosition;
 

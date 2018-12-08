@@ -11,7 +11,9 @@
 @interface Ability : NSObject
 
 @property (strong, nonatomic) NSMutableArray *shape;
+@property int delay;
+@property int time;
 
--(id)initWithPoints:(NSMutableArray*)points;
+-(id)initWithPoints:(NSMutableArray *)points Delay:(int)d Linger:(int)l;
 
 @end

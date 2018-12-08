@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Entity.h"
+#import "Enemy.h"
+#import "Player.h"
 
 @interface Tile : NSObject
 
@@ -17,10 +18,11 @@
 @property int damageDelay;
 @property bool isDamaging;
 @property bool isDelayed;
+@property bool isFriendly;
 
 -(id)init;
 -(bool)isDamage;
--(void)setDamageWithAmount:(int)amount time:(int)time after:(int)delay;
+-(void)setDamageWithAmount:(int)amount time:(int)time after:(int)delay friendly:(bool)friendly;
 -(void)causeDamage;
 -(void)tick;
 

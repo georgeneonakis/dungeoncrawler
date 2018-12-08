@@ -15,11 +15,13 @@
 -(id)initWithGrid:(Grid*)g {
     self = [super init];
     self.gridView = g;
-    srand((int)time(NULL));
-    self.grid = [[NSMutableArray alloc] initWithCapacity:5];
-    for (int i = 0; i < 5; i++) {
-        self.grid[i] = [[NSMutableArray alloc] initWithObjects:
-                        [[Tile alloc] init],[[Tile alloc] init],[[Tile alloc] init],[[Tile alloc] init],[[Tile alloc] init],nil];
+    self.grid = [[NSMutableArray alloc] initWithCapacity: [self.gridView.tiles count]];
+    for (int i = 0; i < [self.gridView.tiles count]; i++) {
+        self.grid[i] = [[NSMutableArray alloc] initWithCapacity: [self.gridView.tiles count]];
+        for( int j = 0; j < [self.gridView.tiles[0] count]; j++ )
+        {
+            [self.grid[i] addObject:[[Tile alloc] init]];
+        }
     }
     self.entityManager = [[NSMutableArray alloc] initWithCapacity:10];
     [self spawnEntities];
@@ -31,11 +33,54 @@
         for (int j = 0; j < [grid[0] count]; j++) {
             [grid[i][j] tick];
             if ([grid[i][j] isDamage]) {
-                [self.gridView changeColorOfTileAtX:i Y:j Color: [UIColor purpleColor]];
+                [self.gridView addEffectLayerAtX:i Y:j Color: [UIColor redColor]];
             }
-            else if (((Tile*)self.grid[i][j]).object == nil) {
-                [self.gridView changeColorOfTileAtX:i Y:j Color: [UIColor whiteColor]];
+            else if([grid[i][j] isDelayed])
+            {
+                [self.gridView addEffectLayerAtX:i Y:j Color: [UIColor purpleColor]];
             }
+            else {
+                [self.gridView stopEffectAtX:i Y:j];
+            }
+        }
+    }
+    for( Entity *entity in self.entityManager )
+    {
+        if( [entity isKindOfClass:[Player class]])  { continue; }
+        int val = rand() % 101;
+        if( val < 50 )
+        {
+            int moveX = 0;
+            int moveY = 0;
+            val = rand() % 4;
+            switch ( val ) {
+                case 0:
+                    moveX = 0;
+                    moveY = -1;
+                    break;
+                case 1:
+                    moveX = 1;
+                    moveY = 0;
+                    break;
+                case 2:
+                    moveX = 0;
+                    moveY = 1;
+                    break;
+                case 3:
+                    moveX = -1;
+                    moveY = 0;
+                    break;
+                default:
+                    break;
+            }
+            
+            [self updatePositionOfEntity:entity ByX:moveX Y:moveY];
+        }
+    }
+    for( Entity *entity in self.entityManager )
+    {
+        if( entity.markedForDeath )  {
+            [self destroyEntityAtIndex:entity.entityIndex];
         }
     }
 }
@@ -43,8 +88,8 @@
 -(void)updatePositionOfEntity:(Entity*)entity ByX:(int)x Y:(int)y {
     int prevX = [entity getXPosition];
     int prevY = [entity getYPosition];
+    [((Tile*)self.grid[prevX][prevY]).object.objectImageView removeFromSuperview];
     ((Tile*)self.grid[prevX][prevY]).object = nil;
-    [self.gridView changeColorOfTileAtX:prevX Y:prevY Color:[UIColor whiteColor]];
     int currentX = prevX + x;
     int currentY = prevY + y;
     if (currentX < 0) {
@@ -61,14 +106,16 @@
     }
     if (((Tile*)self.grid[currentX][currentY]).object != nil) {
         if ([((Tile*)self.grid[currentX][currentY]).object isKindOfClass:[Enemy class]]) {
-            [self.player causeDamage:1];
+            if( [entity isKindOfClass:[Player class]])
+            {
+                [entity causeDamage:1];
+            }
         }
         currentX = prevX;
         currentY = prevY;
     }
     ((Tile*)self.grid[currentX][currentY]).object = entity;
-    UIColor *entityColor = [UIColor blueColor];
-    [self.gridView changeColorOfTileAtX:currentX Y:currentY Color:entityColor];
+    [((TileView*)self.gridView.tiles[currentY][currentX]) addSubview: entity.objectImageView];
     [entity movePositionToX:currentX Y:currentY];
 }
 
@@ -77,8 +124,7 @@
     int playerX = [self.player getXPosition];
     int playerY = [self.player getYPosition];
     ((Tile*)self.grid[playerX][playerY]).object = self.player;
-    UIColor *playerColor = [UIColor blueColor];
-    [self.gridView changeColorOfTileAtX:playerX Y:playerY Color:playerColor];
+    [((TileView*)self.gridView.tiles[playerY][playerX]) addSubview: self.player.objectImageView];
     [self.entityManager addObject:self.player];
     self.player.entityIndex = [self.entityManager count] - 1;
     self.player.delegate = self;
@@ -89,10 +135,9 @@
             currentX = rand() % 5;
             currentY = rand() % 5;
         }
-        Enemy *newEnemy = [[Enemy alloc] initWithX:currentX Y:currentY Blocks:false Health:1];
+        Enemy *newEnemy = [[Enemy alloc] initWithX:currentX Y:currentY Blocks:false Image:@"Slime_Enemy_Sprite0.png" Health:1];
         ((Tile*)self.grid[currentX][currentY]).object = newEnemy;
-        UIColor *enemyColor = [UIColor redColor];
-        [self.gridView changeColorOfTileAtX:currentX Y:currentY Color:enemyColor];
+        [((TileView*)self.gridView.tiles[currentY][currentX]) addSubview: newEnemy.objectImageView];
         [self.entityManager addObject:newEnemy];
         newEnemy.entityIndex = [self.entityManager count] - 1;
         newEnemy.delegate = self;
@@ -143,16 +188,15 @@
         if (xAttack < 0 || xAttack >= [self.gridView getWidth] || yAttack < 0 || yAttack >= [self.gridView getHeight]) {
             continue;
         }
-        NSLog(@"Set damage of tile at x:%d, y:%d", xBlock(forward, right, x), yBlock(forward, right, y));
-        [((Tile*)self.grid[xAttack][yAttack]) setDamageWithAmount:1 time:2 after:0];
+        [((Tile*)self.grid[xAttack][yAttack]) setDamageWithAmount:1 time:a.time after:a.delay friendly:true];
     }
 }
 
 -(void)destroyEntityAtIndex:(int)index{
     Entity *dead = (Entity*)[self.entityManager objectAtIndex:index];
+    [((Tile*)self.grid[[dead getXPosition]][[dead getYPosition]]).object.objectImageView removeFromSuperview];
     [self.entityManager exchangeObjectAtIndex:index withObjectAtIndex:[self.entityManager count] - 1];
     ((Entity*)[self.entityManager objectAtIndex:index]).entityIndex = index;
-    [self.gridView changeColorOfTileAtX:[dead getXPosition] Y:[dead getYPosition] Color: [UIColor whiteColor]];
     [self.entityManager removeLastObject];
 }
 

@@ -12,6 +12,12 @@
     UIView *tileImage;
 }
 
--(void)changeColor:(UIColor*)color;
+@property (strong, nonatomic) UIImageView *tileImageView;
+@property (strong, nonatomic) UIImageView *decorationImageView;
+@property (strong, nonatomic) UIView *effectView;
+@property (strong, nonatomic) UIImageView *itemImageView;
+
+-(void)changeEffectColor:(UIColor*)color;
+-(void)stopEffect;
 
 @end

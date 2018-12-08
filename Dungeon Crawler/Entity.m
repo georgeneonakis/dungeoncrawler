@@ -10,10 +10,10 @@
 
 @implementation Entity
 
-@synthesize health, direction, entityIndex;
+@synthesize health,markedForDeath, direction, entityIndex;
 
--(id)initWithX:(int)x Y:(int)y Blocks:(bool)blocks Health:(int)hp {
-    self = [super initWithX:x Y:y Blocks:blocks];
+-(id)initWithX:(int)x Y:(int)y Blocks:(bool)block Image:(NSString *)imageName Health:(int)hp {
+    self = [super initWithX:x Y:y Blocks:blocks Image: imageName];
     self.health = hp;
     self.direction = 2;
     return self;
@@ -22,7 +22,7 @@
 -(void)causeDamage:(int)amount {
     self.health -= amount;
     if (self.health < 0) {
-        self.health = 0;
+        self.markedForDeath = true;
     }
 }
 
@@ -31,8 +31,8 @@
     yPos = y;
 }
 
--(void)attack {
-    [self.delegate applyAbility:self.abilities[0] AtBaseX:xPos BaseY:yPos Direction:self.direction];
+-(void)performAbility:(int)index {
+    [self.delegate applyAbility:self.abilities[index] AtBaseX:xPos BaseY:yPos Direction:self.direction];
 }
 
 @end

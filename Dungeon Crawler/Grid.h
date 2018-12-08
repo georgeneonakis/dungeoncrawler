@@ -15,8 +15,10 @@
 
 -(id)initWithWidth:(int)width Height:(int)height xPos:(int)x yPos:(int)y tileSize:(int)s;
 -(id)initWithSize:(int)size xPos:(int)x yPos:(int)y tileSize:(int)s;
--(void)changeColorOfTileAtX:(int)x Y:(int)y Color:(UIColor*)color;
 -(int)getWidth;
 -(int)getHeight;
+-(void)addEffectLayerAtX:(int)x Y:(int)y Color:(UIColor *)color;
+-(void)stopEffectAtX:(int)x Y:(int)y;
+-(id)initWithWidth:(int)width Height:(int)height xPos:(int)x yPos:(int)y tileSize:(int)s Image:(NSString *) imageName;
 
 @end

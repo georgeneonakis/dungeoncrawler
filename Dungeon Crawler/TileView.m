@@ -12,16 +12,29 @@
 
 -(id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    self.backgroundColor = [UIColor blackColor];
-    tileImage = [[UIView alloc] initWithFrame:CGRectInset(self.bounds, 5, 5)];
-    UIColor* white = [UIColor whiteColor];
-    [self changeColor:white];
-    [self addSubview:tileImage];
+    [self.tileImageView setContentMode:UIViewContentModeScaleAspectFit];
+    [self.tileImageView.layer setMagnificationFilter:kCAFilterNearest];
+    [self.tileImageView.layer setMinificationFilter:kCAFilterNearest];
+    self.tileImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    int val = rand() % 2;
+    UIImage *tileImage = [UIImage imageNamed: [NSString stringWithFormat: @"Forest_Tile%d.png", val]];
+    self.tileImageView.image = tileImage;
+    [self addSubview: self.tileImageView];
+    
+    self.effectView = [[ UIView alloc] initWithFrame:self.bounds];
+    self.effectView.alpha = 0.30;
+    [self.effectView setHidden: YES];
+    [self addSubview: self.effectView];
     return self;
 }
 
--(void)changeColor:(UIColor*)color {
-    tileImage.backgroundColor = color;
+-(void)changeEffectColor:(UIColor*)color {
+    self.effectView.backgroundColor = color;
+    [self.effectView setHidden: NO];
+}
+
+-(void)stopEffect {
+    [self.effectView setHidden: YES];
 }
 
 @end

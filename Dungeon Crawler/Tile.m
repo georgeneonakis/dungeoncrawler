@@ -16,6 +16,7 @@
     self = [super init];
     self.isDamaging = false;
     self.isDelayed = false;
+    self.isFriendly = false;
     return self;
 }
 
@@ -23,10 +24,11 @@
     return self.isDamaging;
 }
 
--(void)setDamageWithAmount:(int)amount time:(int)time after:(int)delay {
+-(void)setDamageWithAmount:(int)amount time:(int)time after:(int)delay friendly:(bool)friendly {
     self.damageDelay = delay;
     self.damageAmount = amount;
     self.damageTime = time;
+    self.isFriendly = friendly;
     if (delay != 0) {
         self.isDelayed = true;
     }
@@ -37,7 +39,9 @@
 
 -(void)causeDamage {
     if ([object isKindOfClass:[Entity class]]) {
-        [(Entity*)object causeDamage:self.damageAmount];
+        if ((self.isFriendly && [object isKindOfClass:[Enemy class]]) || (!self.isFriendly && [object isKindOfClass:[Player class]])) {
+            [(Entity*)object causeDamage:self.damageAmount];
+        }
     }
 }
 
@@ -49,13 +53,14 @@
         }
         self.damageDelay--;
     }
-    else if (self.isDamaging) {
+    if (self.isDamaging) {
         [self causeDamage];
-        self.damageTime--;
         if (self.damageTime == 0) {
             self.isDamaging = false;
             self.damageAmount = 0;
         }
+        self.damageTime--;
+        if(self.damageTime < 0 )    { self.damageTime = 0; }
     }
 }
 

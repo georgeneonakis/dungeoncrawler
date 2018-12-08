@@ -10,12 +10,16 @@
 
 @implementation Ability
 
--(id)initWithPoints:(NSMutableArray *)points {
+@synthesize shape, delay, time;
+
+-(id)initWithPoints:(NSMutableArray *)points Delay:(int)d Linger:(int)l {
     self = [super init];
     self.shape = [[NSMutableArray alloc] init];
     for (int i = 0; i < [points count]; i++) {
         [self.shape addObject:points[i]];
     }
+    self.delay = d;
+    self.time = l;
     return self;
 }
 

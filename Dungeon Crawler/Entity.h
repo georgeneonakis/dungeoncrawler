@@ -21,14 +21,15 @@
 
 @property id<EntityDelegate> delegate;
 @property int health;
+@property BOOL markedForDeath;
 @property int direction;
 @property int entityIndex;
 @property (strong, nonatomic) NSMutableArray *abilities;
 
 
--(id)initWithX:(int)x Y:(int)y Blocks:(bool)blocks Health:(int)hp;
+-(id)initWithX:(int)x Y:(int)y Blocks:(bool)block Image:(NSString *)imageName Health:(int)hp;
 -(void)causeDamage:(int)amount;
 -(void)movePositionToX:(int)x Y:(int)y;
--(void)attack;
+-(void)performAbility:(int)index;
 
 @end

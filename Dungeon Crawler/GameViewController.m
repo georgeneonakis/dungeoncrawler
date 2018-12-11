@@ -129,7 +129,12 @@
 }
 
 -(void)levelUp:(int)level {
-    self.levelText.text = [NSString stringWithFormat: @"Level: %d", level];
+    if (level > self.engine.maxLevel) {
+        self.levelText.text = @"Victory!";
+    }
+    else {
+        self.levelText.text = [NSString stringWithFormat: @"Level: %d", level];
+    }
 }
 
 -(void)swipeLeftRight:(UISwipeGestureRecognizer *)swiper {

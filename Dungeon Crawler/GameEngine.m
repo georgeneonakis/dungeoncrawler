@@ -24,7 +24,6 @@
         }
     }
     self.entityManager = [[NSMutableArray alloc] initWithCapacity:10];
-    self.levels = [[Levels alloc] init];
     self.player = [[Player alloc] initWithX:0 Y:0 Blocks:false Health:5];
     int playerX = [self.player getXPosition];
     int playerY = [self.player getYPosition];
@@ -34,11 +33,15 @@
     self.player.entityIndex = [self.entityManager count] - 1;
     self.player.delegate = self;
     self.level = 1;
+    self.maxLevel = 3;
     [self loadLevel:1];
     return self;
 }
 
 -(void)loadLevel:(int)level {
+    if (level > self.maxLevel) {
+        return;
+    }
     [self updatePositionOfEntity:self.player ByX:-[self.player getXPosition] Y:-[self.player getYPosition]];
     [self.player causeDamage:(self.player.health - 5)];
     
@@ -56,8 +59,7 @@
         NSArray *singleAttribute = [[levelAttributes objectAtIndex:i] componentsSeparatedByString:@" "];
         int index = (int)[[singleAttribute objectAtIndex:0] intValue];
         int xSpawn = (int)[[singleAttribute objectAtIndex:1] intValue];
-        int ySpawn = (int)[[singleAttribute objectAtIndex:2] intValue];
-        NSLog([NSString stringWithFormat:@"%d, %d, %d", index, xSpawn, ySpawn]);
+        int ySpawn = (int)[[singleAttribute objectAtIndex:2] intValue];\
         [self spawnObject:index atX:xSpawn Y:ySpawn];
     }
 }
@@ -66,8 +68,8 @@
     if ([self.entityManager count] <= 1) {
         self.level += 1;
         [self.player levelUp:self.level];
+        
         [self loadLevel:self.level];
-        return;
     }
     for (int i = 0; i < [grid count]; i++) {
         for (int j = 0; j < [grid[0] count]; j++) {

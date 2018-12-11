@@ -45,7 +45,6 @@
 		F5ACE26221A5CBB700B6DDF0 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE26121A5CBB700B6DDF0 /* Tile.m */; };
 		F5ACE26521A5CE6C00B6DDF0 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE26421A5CE6C00B6DDF0 /* GameObject.m */; };
 		F5ACE26821A5CF8400B6DDF0 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ACE26721A5CF8400B6DDF0 /* Entity.m */; };
-		F5BA87E421C065460095CB4C /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BA87E321C065460095CB4C /* Levels.m */; };
 		F5BA87E721C06E150095CB4C /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5BA87E621C06E150095CB4C /* level1.txt */; };
 		F5BA87E921C0708B0095CB4C /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5BA87E821C0708B0095CB4C /* level2.txt */; };
 		F5BA87EB21C071050095CB4C /* level3.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5BA87EA21C071050095CB4C /* level3.txt */; };
@@ -124,8 +123,6 @@
 		F5ACE26421A5CE6C00B6DDF0 /* GameObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		F5ACE26621A5CF7A00B6DDF0 /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		F5ACE26721A5CF8400B6DDF0 /* Entity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
-		F5BA87E221C064CE0095CB4C /* Levels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Levels.h; sourceTree = "<group>"; };
-		F5BA87E321C065460095CB4C /* Levels.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Levels.m; sourceTree = "<group>"; };
 		F5BA87E621C06E150095CB4C /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 		F5BA87E821C0708B0095CB4C /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = level2.txt; path = "Dungeon Crawler/Levels/level2.txt"; sourceTree = SOURCE_ROOT; };
 		F5BA87EA21C071050095CB4C /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = "<group>"; };
@@ -242,8 +239,6 @@
 				F5C3232E21AD9F2C0067E5FB /* Grid.m */,
 				F5A7543821AEFFB500CBA93C /* Ability.h */,
 				F5A7543921AEFFC800CBA93C /* Ability.m */,
-				F5BA87E221C064CE0095CB4C /* Levels.h */,
-				F5BA87E321C065460095CB4C /* Levels.m */,
 			);
 			path = "Dungeon Crawler";
 			sourceTree = "<group>";
@@ -435,7 +430,6 @@
 			files = (
 				F54D5F5621A70F5E009563C1 /* Enemy.m in Sources */,
 				F5ACE26821A5CF8400B6DDF0 /* Entity.m in Sources */,
-				F5BA87E421C065460095CB4C /* Levels.m in Sources */,
 				F5C3232F21AD9F2C0067E5FB /* Grid.m in Sources */,
 				F5C3232C21AD9B9C0067E5FB /* TileView.m in Sources */,
 				F5ACE25B21A5C32100B6DDF0 /* Player.m in Sources */,

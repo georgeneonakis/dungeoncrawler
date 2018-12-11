@@ -11,19 +11,22 @@
 #import "Enemy.h"
 #import "Tile.h"
 #import "Grid.h"
+#import "Levels.h"
 
 @interface GameEngine : NSObject<EntityDelegate>
 
+@property (strong, nonatomic) Levels *levels;
 @property (strong, nonatomic) Player *player;
 @property (strong, nonatomic) NSMutableArray *grid;
 @property (strong, nonatomic) NSMutableArray *entityManager;
 @property (weak, nonatomic) Grid *gridView;
-@property int enemyCount;
+@property int level;
 
 -(id)initWithGrid:(Grid*)g;
 -(void)nextFrame;
 -(void)updatePositionOfEntity:(Entity*)entity ByX:(int)x Y:(int)y;
--(void)spawnEntities:(int)number;
+-(void)spawnObject:(int)index atX:(int)x Y:(int)y;
 -(void)applyAbility:(Ability *)a AtBaseX:(int)x BaseY:(int)y Direction:(int)direction;
+-(void)loadLevel:(int)level;
 
 @end

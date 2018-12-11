@@ -24,6 +24,7 @@
         }
     }
     self.entityManager = [[NSMutableArray alloc] initWithCapacity:10];
+    self.levels = [[Levels alloc] init];
     self.player = [[Player alloc] initWithX:0 Y:0 Blocks:false Health:5];
     int playerX = [self.player getXPosition];
     int playerY = [self.player getYPosition];
@@ -32,16 +33,40 @@
     [self.entityManager addObject:self.player];
     self.player.entityIndex = [self.entityManager count] - 1;
     self.player.delegate = self;
-    self.enemyCount = 2;
-    [self spawnEntities:self.enemyCount];
+    self.level = 1;
+    [self loadLevel:1];
     return self;
+}
+
+-(void)loadLevel:(int)level {
+    [self updatePositionOfEntity:self.player ByX:-[self.player getXPosition] Y:-[self.player getYPosition]];
+    [self.player causeDamage:(self.player.health - 5)];
+    
+    NSString *levelName = [NSString stringWithFormat:@"level%d", level];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:levelName ofType:@"txt"];
+    NSError *error;
+    NSString *fileContents = [NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:&error];
+    
+    if (error) {
+        NSLog(@"Error reading level file");
+    }
+    
+    NSArray *levelAttributes = [fileContents componentsSeparatedByString:@"\n"];
+    for (int i = 0; i < [levelAttributes count] - 1; i++) {
+        NSArray *singleAttribute = [[levelAttributes objectAtIndex:i] componentsSeparatedByString:@" "];
+        int index = (int)[[singleAttribute objectAtIndex:0] intValue];
+        int xSpawn = (int)[[singleAttribute objectAtIndex:1] intValue];
+        int ySpawn = (int)[[singleAttribute objectAtIndex:2] intValue];
+        NSLog([NSString stringWithFormat:@"%d, %d, %d", index, xSpawn, ySpawn]);
+        [self spawnObject:index atX:xSpawn Y:ySpawn];
+    }
 }
 
 -(void)nextFrame {
     if ([self.entityManager count] <= 1) {
-        self.enemyCount += 1;
-        [self spawnEntities:self.enemyCount];
-        [self.player causeDamage:(self.player.health - 5)];
+        self.level += 1;
+        [self.player levelUp:self.level];
+        [self loadLevel:self.level];
         return;
     }
     for (int i = 0; i < [grid count]; i++) {
@@ -140,22 +165,19 @@
     [entity movePositionToX:currentX Y:currentY];
 }
 
--(void)spawnEntities:(int)number {
-    for (int i = 0; i < number; i++) {
-        int currentX = rand() % 5;
-        int currentY = rand() % 5;
-        while (((Tile*)self.grid[currentX][currentY]).object != nil) {
-            currentX = rand() % 5;
-            currentY = rand() % 5;
+-(void)spawnObject:(int)index atX:(int)x Y:(int)y {
+    Enemy *newEnemy;
+    switch (index) {
+        // Put cases for all different object/entity types here
+        case 0: {
+            newEnemy = [[Enemy alloc] initWithX:x Y:y Blocks:false Image:@"Slime_Enemy_Sprite0.png" Health:1];
         }
-        Enemy *newEnemy = [[Enemy alloc] initWithX:currentX Y:currentY Blocks:false Image:@"Slime_Enemy_Sprite0.png" Health:1];
-        ((Tile*)self.grid[currentX][currentY]).object = newEnemy;
-        [((TileView*)self.gridView.tiles[currentY][currentX]) addSubview: newEnemy.objectImageView];
-        [self.entityManager addObject:newEnemy];
-        newEnemy.entityIndex = [self.entityManager count] - 1;
-        newEnemy.delegate = self;
     }
-    [self.player.gvc levelUp:(number - 1)];
+    ((Tile*)self.grid[x][y]).object = newEnemy;
+    [((TileView*)self.gridView.tiles[y][x]) addSubview: newEnemy.objectImageView];
+    [self.entityManager addObject:newEnemy];
+    newEnemy.entityIndex = [self.entityManager count] - 1;
+    newEnemy.delegate = self;
 }
 
 #pragma delegate

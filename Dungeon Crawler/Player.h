@@ -12,6 +12,7 @@
 @protocol PlayerDelegate <NSObject>
 
 -(void)playerHPChanged;
+-(void)levelUp:(int)level;
 
 @end
 
@@ -21,6 +22,7 @@
 
 -(id)initWithX:(int)x Y:(int)y Blocks:(bool)blocks Health:(int)hp;
 -(void)causeDamage:(int)amount;
+-(void)levelUp:(int)level;
 
 @end
 

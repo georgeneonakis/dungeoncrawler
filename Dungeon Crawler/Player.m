@@ -118,4 +118,8 @@
     [gvc playerHPChanged];
 }
 
+-(void)levelUp:(int)level {
+    [gvc levelUp:level];
+}
+
 @end

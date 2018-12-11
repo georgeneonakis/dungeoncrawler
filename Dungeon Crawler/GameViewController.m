@@ -76,6 +76,7 @@
     }
     self.engine = [[GameEngine alloc] initWithGrid:self.gameGrid];
     self.engine.player.gvc = self;
+    self.levelText.text = @"Level: 1";
     buttonTag = 0;
     [self.swipeView addSubview:self.gameGrid];
     [self.view addSubview:self.hpGrid];
@@ -125,6 +126,10 @@
         NSLog(@"Game Over!");
         [self loadGame];
     }
+}
+
+-(void)levelUp:(int)level {
+    self.levelText.text = [NSString stringWithFormat: @"Level: %d", level];
 }
 
 -(void)swipeLeftRight:(UISwipeGestureRecognizer *)swiper {

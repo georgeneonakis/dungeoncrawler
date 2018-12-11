@@ -126,6 +126,12 @@
                 [entity causeDamage:1];
             }
         }
+        else if ([((Tile*)self.grid[currentX][currentY]).object isKindOfClass:[Player class]]) {
+            if( [entity isKindOfClass:[Enemy class]])
+            {
+                [(Player*)((Tile*)self.grid[currentX][currentY]).object causeDamage:1];
+            }
+        }
         currentX = prevX;
         currentY = prevY;
     }
@@ -149,6 +155,7 @@
         newEnemy.entityIndex = [self.entityManager count] - 1;
         newEnemy.delegate = self;
     }
+    [self.player.gvc levelUp:(number - 1)];
 }
 
 #pragma delegate
